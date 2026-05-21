@@ -24,3 +24,18 @@ console.log(soma);
 if (!nome) {
     console.log("Não está preenchido")
 }
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", function (event){
+    event.preventDefault();
+/**
+ * Pega o elemento input que recebe o nome através
+ * do id.
+ */
+    const name = document.getElementById("name") .value;
+    const button = form.querySelector("button");
+    button.disabled = true;
+    button.textContent = "Criando usuario..."
+    console.log(name);
+});
